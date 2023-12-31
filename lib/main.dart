@@ -4,6 +4,7 @@ import 'package:gov_services_app/modules/provider/goverment_service_provider.dar
 import 'package:gov_services_app/modules/view/home_page/provider/web_provider.dart';
 import 'package:gov_services_app/modules/view/home_page/screen/web_page.dart';
 import 'package:gov_services_app/modules/view/home_page/screen/home_page.dart';
+import 'package:gov_services_app/modules/view/home_page/welcome_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        initialRoute: 'welcome',
         routes: {
           '/': (context) => const HomePage(),
+          'welcome': (context) => const WelcomeScreen(),
           'webPage': (context) => const DetailPage(),
         },
       ),
